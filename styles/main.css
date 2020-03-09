@@ -1,0 +1,22 @@
+.criminalsContainer {
+   display: flex;
+   flex-wrap: wrap;
+
+   
+  
+    
+}
+.eachCriminal {
+    flex-basis: 20%;
+    border: 1pt solid black;
+    margin:1rem;
+    padding: 1rem;
+    
+
+}
+
+.eachCriminal__Info {
+   list-style: none;
+   margin-left: -2.5rem;
+
+}
