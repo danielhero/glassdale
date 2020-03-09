@@ -8,7 +8,7 @@
 }
 .eachCriminal {
     flex-basis: 20%;
-    border: 1pt solid black;
+    border: 1pt dotted black;
     margin:1rem;
     padding: 1rem;
     
