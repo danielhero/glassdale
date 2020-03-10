@@ -2,7 +2,7 @@
  *   ConvictionSelect component that renders a select HTML element
  *   which lists all convictions in the Glassdale PD API
  */
-import { useConvictions } from "./convictionsProvider"
+import { useConvictions } from "./convictionsProvider.js"
 
 // Get a reference to the DOM element where the <select> will be rendered
 const contentTarget = document.querySelector(".filters__crime")
@@ -12,8 +12,6 @@ const ConvictionSelect = () => {
     const convictions = useConvictions()
 
     const render = convictionsCollection => {
-        `
-        `
         /*
             Use interpolation here to invoke the map() method on
             the convictionsCollection to generate the option elements.
@@ -22,7 +20,11 @@ const ConvictionSelect = () => {
         contentTarget.innerHTML = `
             <select class="dropdown" id="crimeSelect">
                 <option value="0">Please select a crime...</option>
-                ${convictionsCollection.name}
+                ${
+                    convictionsCollection.map(singleConviction => {
+                        return `<option>${singleConviction.name}</option>`
+                    })
+                }
             </select>
         `
     }
