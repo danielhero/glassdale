@@ -1,0 +1,15 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "noteText": "Suspicious",
+      "noteDate": "5/4/2020",
+      "Suspect": "John Doe"
+    },
+    {
+      "noteText": "Suspicious",
+      "Suspect": "Jane Doe",
+      "id": 2
+    }
+  ]
+}
