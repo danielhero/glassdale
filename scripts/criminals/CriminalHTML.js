@@ -1,13 +1,17 @@
 export const Criminal = (criminalObject) => {
     return `
-    <div class="eachCriminal">
-         <h4>${criminalObject.name}</h4>
-            <ul class="eachCriminal__Info"> 
-                <li>Age: ${criminalObject.age}</li>
-                <li>Crime: ${criminalObject.conviction}</li>
-                <li>Start: ${new Date(criminalObject.incarceration.start).toLocaleDateString('en-US')}</li>
-                <li>End: ${new Date(criminalObject.incarceration.end).toLocaleDateString('en-US')}</li>
-            </ul>
+    <div class="criminal">
+        <h4>${criminalObject.name}</h4>
+        <div class="criminal__details">
+            <p>Convicted for ${criminalObject.conviction}</p>
+            <p>Arrested by ${criminalObject.arrestingOfficer}</p>
+            <p>Incarcerated between:
+                ${new Date(criminalObject.incarceration.start).toLocaleDateString()} and
+                ${new Date(criminalObject.incarceration.end).toLocaleDateString()}
+            </p>
+            <p>Age: ${criminalObject.age}</p>
+            <button id="associates--${criminalObject.id}">Show Associates</button>
+        </div>
     </div>
-     `
- }
+    `
+}

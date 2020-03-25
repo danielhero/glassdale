@@ -1,8 +1,13 @@
-export const Note = (noteObj) => {
+export const Note = (noteObject, criminal) => {
     return `
-        <div class="notes">
-            <h4>${noteObj.Suspect}</h4>
-            <p>${noteObj.noteText}</p>
-        </div>
+        <section class="note">
+            <header>
+                <h4>${criminal.name}</h4>
+            </header>
+            <p>${noteObject.noteText}</p>
+            <p>
+                <button id="deleteNote--${noteObject.id}">Delete Note</button>
+            \</p>
+        </section>
     `
 }
